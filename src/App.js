@@ -55,7 +55,7 @@ function App() {
           <Route path="/summary" element={<Summary />} />
           <Route path="/paragraph" element={<Paragraph />} />
           <Route path="/chatbot" element={<ChatBot />} />
-          <Route path="/js-converter" element={<JsConverter />} />
+          <Route path="/bash-converter" element={<JsConverter />} />
           <Route path="/image-generation" element={<ImageGeneration />} />
           <Route path="/email-generation" element={<Email />} />
           <Route path="/history" element={<History />} />

@@ -197,7 +197,7 @@ const ImageSection = ({
               generate anime image
             </Button>
             <Typography mt={2}>
-              Not this tool? <Link to="/">GO BACK</Link>
+              Not this tool? <Link to="/dashboard">GO BACK</Link>
             </Typography>
           </form>
 

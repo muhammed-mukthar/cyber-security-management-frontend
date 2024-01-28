@@ -311,10 +311,10 @@ const Homepage = () => {
             }}
           >
             <Typography variant="h4" mb={2} fontWeight="bold">
-              AI Image Generation
+              Text to bash script converter{" "}
             </Typography>
             <Card
-              onClick={() => navigate("/image-generation")}
+              onClick={() => navigate("/bash-converter")}
               sx={{
                 boxShadow: 2,
                 display: "flex",
@@ -331,7 +331,7 @@ const Homepage = () => {
                 },
               }}
             >
-              <ImageSearchIcon
+              <CodeIcon
                 sx={{ fontSize: 80, color: "primary.main", mt: 2, ml: 2 }}
               />
               <Stack
@@ -345,9 +345,11 @@ const Homepage = () => {
                 }}
               >
                 <Typography fontWeight="bold" variant="h5">
-                  Image Generation
+                  text to bash converter
                 </Typography>
-                <Typography variant="h6">Generate images</Typography>
+                <Typography variant="h6">
+                  text to bash script converter
+                </Typography>
               </Stack>
             </Card>
           </Box>

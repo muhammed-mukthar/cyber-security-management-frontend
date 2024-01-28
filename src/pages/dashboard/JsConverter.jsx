@@ -94,7 +94,7 @@ const JsConverter = () => {
             </Alert>
           </Collapse>
           <form onSubmit={handleSubmit}>
-            <Typography variant="h3">JS Converter</Typography>
+            <Typography variant="h3">Text to Bash Script Converter</Typography>
 
             <TextField
               placeholder="Add your text"
@@ -120,7 +120,7 @@ const JsConverter = () => {
               Convert
             </Button>
             <Typography mt={2}>
-              Not this tool ? <Link to="/">GO BACK</Link>
+              Not this tool ? <Link to="/dashboard">GO BACK</Link>
             </Typography>
           </form>
 
