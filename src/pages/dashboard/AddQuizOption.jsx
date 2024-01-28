@@ -119,6 +119,18 @@ const AddQuizOptions = () => {
       setLoading(false);
       setResponse(!response);
       console.log(data);
+
+      // Clear the form fields after successful submission
+      setQuizOptions({
+        question: "",
+        answer: "",
+        options: ["", "", "", ""],
+      });
+      setValidationErrors({
+        question: "",
+        answer: "",
+        options: ["", "", "", ""],
+      });
     } catch (err) {
       console.log(error);
       setLoading(false);
@@ -158,6 +170,24 @@ const AddQuizOptions = () => {
             alignContent: "flex-start",
           }}
         >
+          {" "}
+          <Button
+            variant="contained"
+            component={Link}
+            to="/dashboard"
+            sx={{
+              backgroundColor: theme.palette.primary.main,
+              color: theme.palette.primary.contrastText,
+              "&:hover": {
+                backgroundColor: theme.palette.primary.dark,
+              },
+            }}
+          >
+            {/* Ensure text is visible */}
+            <span style={{ color: theme.palette.primary.contrastText }}>
+              Back
+            </span>
+          </Button>
           <Typography variant="h3">
             Please
             <Link to={"/login"}>Log In</Link>
@@ -173,6 +203,24 @@ const AddQuizOptions = () => {
           sx={{ boxShadow: 5 }}
           backgroundColor={theme.palette.background.alt}
         >
+          {" "}
+          <Button
+            variant="contained"
+            component={Link}
+            to="/dashboard"
+            sx={{
+              backgroundColor: theme.palette.primary.main,
+              color: theme.palette.primary.contrastText,
+              "&:hover": {
+                backgroundColor: theme.palette.primary.dark,
+              },
+            }}
+          >
+            {/* Ensure text is visible */}
+            <span style={{ color: theme.palette.primary.contrastText }}>
+              Back
+            </span>
+          </Button>
           <Collapse in={error !== ""}>
             <Alert severity="error" sx={{ mb: 2 }}>
               {error}
@@ -242,7 +290,6 @@ const AddQuizOptions = () => {
               Not this tool ? <Link to="/">GO BACK</Link>
             </Typography>
           </form>
-
           <TableContainer component={Paper}>
             <Table>
               <TableHead>

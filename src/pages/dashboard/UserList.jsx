@@ -9,8 +9,10 @@ import {
   Paper,
   Box,
   useTheme,
+  Button,
 } from "@mui/material";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function UserList() {
   const [users, setUsers] = useState([]);
@@ -45,6 +47,22 @@ function UserList() {
       sx={{ boxShadow: 5 }}
       backgroundColor={theme.palette.background.alt}
     >
+      <Button
+        variant="contained"
+        component={Link}
+        to="/dashboard"
+        sx={{
+          backgroundColor: theme.palette.primary.main,
+          color: theme.palette.primary.contrastText,
+          "&:hover": {
+            backgroundColor: theme.palette.primary.dark,
+          },
+        }}
+      >
+        {/* Ensure text is visible */}
+        <span style={{ color: theme.palette.primary.contrastText }}>Back</span>
+      </Button>
+
       <TableContainer component={Paper}>
         <Table>
           <TableHead>
