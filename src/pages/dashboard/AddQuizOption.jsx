@@ -194,6 +194,21 @@ const AddQuizOptions = () => {
               onChange={handleInputChange}
             />
 
+            {quizOptions.options.map((option, index) => (
+              <TextField
+                key={index}
+                placeholder={`Option ${index + 1}`}
+                type="text"
+                required
+                margin="normal"
+                fullWidth
+                value={option}
+                onChange={(e) => handleQuizOptionChange(index, e.target.value)}
+                error={validationErrors.options[index] !== ""}
+                helperText={validationErrors.options[index]}
+              />
+            ))}
+
             {/* Select box for answer */}
             <Select
               value={quizOptions.answer}
@@ -213,22 +228,6 @@ const AddQuizOptions = () => {
                 </MenuItem>
               ))}
             </Select>
-
-            {quizOptions.options.map((option, index) => (
-              <TextField
-                key={index}
-                placeholder={`Option ${index + 1}`}
-                type="text"
-                required
-                margin="normal"
-                fullWidth
-                value={option}
-                onChange={(e) => handleQuizOptionChange(index, e.target.value)}
-                error={validationErrors.options[index] !== ""}
-                helperText={validationErrors.options[index]}
-              />
-            ))}
-
             <Button
               type="submit"
               fullWidth

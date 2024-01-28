@@ -11,6 +11,7 @@ function Header() {
     navigate(path);
   };
   const userData = useSelector((state) => state.userId.userData);
+  const loggedIn = JSON.parse(localStorage.getItem("authToken"));
 
   return (
     <div className="heading bodys">
@@ -49,7 +50,7 @@ function Header() {
             RECOMMENDATIONS
           </button>
         </span>
-        {!userData ? (
+        {!loggedIn ? (
           <span>
             <button onClick={() => handleNavigation("/login")}>LOGIN</button>
           </span>

@@ -12,11 +12,24 @@ import PeopleIcon from "@mui/icons-material/People";
 import LogoutIcon from "@mui/icons-material/Logout";
 import "./dashboard.css"; // Import CSS file
 import PsychologyAltIcon from "@mui/icons-material/PsychologyAlt";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setUserData } from "../../store/userIdSlice";
 const Homepage = () => {
   const navigate = useNavigate();
   const userData = useSelector((state) => state.userId.userData);
+  const dispatch = useDispatch();
 
+  //handle logout
+  const handleLogout = async () => {
+    try {
+      console.log("this is me");
+      localStorage.setItem("authToken", false);
+      dispatch(setUserData(null));
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       {userData?.role != "admin" ? (
@@ -402,7 +415,7 @@ const Homepage = () => {
               Home{" "}
             </Typography>
             <Card
-              onClick={() => navigate("/")}
+              onClick={handleLogout}
               sx={{
                 boxShadow: 2,
                 display: "flex",
@@ -563,7 +576,7 @@ const Homepage = () => {
               Home{" "}
             </Typography>
             <Card
-              onClick={() => navigate("/")}
+              onClick={handleLogout}
               sx={{
                 boxShadow: 2,
                 display: "flex",

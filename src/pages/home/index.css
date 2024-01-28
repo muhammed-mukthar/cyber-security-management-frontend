@@ -27,7 +27,7 @@ html {
 main {
   display: flex;
   flex-direction: row;
-  margin: 2vw;
+  margin: 0;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;

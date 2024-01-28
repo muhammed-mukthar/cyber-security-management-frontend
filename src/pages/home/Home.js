@@ -16,7 +16,7 @@ function HomeComponent() {
             textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
           }}
         >
-          <b>💻 NOTABLE CYBER-ATTACKS 💻</b>
+          <b>💻 CYBER-SECURITY 💻</b>
         </h1>
       </div>
       <main>
@@ -28,7 +28,6 @@ function HomeComponent() {
                 <br />
                 AWARENESS
               </div>
-              <h3 className="slogan">As you are online so are the bad guys!</h3>
             </div>
             <p className="subtitle">
               The internet has made the world smaller in many ways, but it has
@@ -38,9 +37,6 @@ function HomeComponent() {
               Cybersecurity begins with you....<b>is your password strong?</b>
             </p>
             <div className="links">
-              <div className="btn">
-                <a href="Learn_more.html">LEARN MORE</a>
-              </div>
               <div className="btn">
                 <a
                   href="https://youtu.be/inWWhr5tnEA?si=i1ntfhEJUpjajEgh"
@@ -57,6 +53,49 @@ function HomeComponent() {
           </span>
         </div>
       </main>
+
+      <footer style={{ marginBottom: 0 }}>
+        <a href="facts.html">
+          <img
+            style={{ filter: "drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.5))" }}
+            className="card3"
+          />
+        </a>
+        <a href="contact.html">
+          <img
+            style={{ filter: "drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.5))" }}
+            className="card2"
+          />
+        </a>
+      </footer>
+      <footer style={{ marginBottom: 0 }}>
+        <a href="facts.html">
+          <img
+            style={{ filter: "drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.5))" }}
+            className="card3"
+          />
+        </a>
+        <a href="contact.html">
+          <img
+            style={{ filter: "drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.5))" }}
+            className="card2"
+          />
+        </a>
+      </footer>
+      <footer style={{ marginBottom: 0 }}>
+        <a href="facts.html">
+          <img
+            style={{ filter: "drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.5))" }}
+            className="card3"
+          />
+        </a>
+        <a href="contact.html">
+          <img
+            style={{ filter: "drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.5))" }}
+            className="card2"
+          />
+        </a>
+      </footer>
     </div>
   );
 }

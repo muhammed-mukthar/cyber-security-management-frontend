@@ -30,6 +30,7 @@ import AddQuizOptions from "./pages/dashboard/AddQuizOption";
 
 function App() {
   const theme = useMemo(() => createTheme(themeSettings()), []);
+  const loggedIn = JSON.parse(localStorage.getItem("authToken"));
 
   return (
     <ThemeProvider theme={theme}>
@@ -47,10 +48,10 @@ function App() {
             path="/recommendations"
           ></Route>
           <Route element={<CyberSecurityQuizComponent />} path="/cyber"></Route>
-
-          <Route path="/dashboard" element={<Homepage />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Homepage />} />
+
           <Route path="/summary" element={<Summary />} />
           <Route path="/paragraph" element={<Paragraph />} />
           <Route path="/chatbot" element={<ChatBot />} />

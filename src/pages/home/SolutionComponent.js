@@ -190,8 +190,6 @@ function SolutionsComponent() {
                   attacker from using your device to infiltrate deeper into the
                   network.
                   <br />
-                  • From a different device change passwords for your accounts.
-                  <br />• Immediately call for help and notify contacts.
                 </p>
               </div>
             </div>
